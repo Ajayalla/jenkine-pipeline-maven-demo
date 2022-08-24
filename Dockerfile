@@ -1,5 +1,4 @@
-FROM maven:3.6.0-jdk-13
-
-RUN useradd -m -u 1000 -s /bin/bash jenkins
-
-RUN yum install -y openssh-clients
+FROM openjdk:8
+ADD target/docker-spring-boot.jar docker-spring-boot.jar
+EXPOSE 8081
+ENTRYPOINT ["java", "-jar", "docker-spring-boot.jar"]
