@@ -1,13 +1,15 @@
-package com.github.wololock;
+package com.techprimers.docker.dockerspringboot;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/rest/docker/hello")
+public class HelloResource {
+
+    @GetMapping
+    public String hello() {
+        return "Hello Youtube";
     }
 }
