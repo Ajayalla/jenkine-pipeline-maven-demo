@@ -1,4 +1,4 @@
-package com.github.wololock;
+ackage com.github.wololock;
 
 import static org.junit.Assert.assertTrue;
 
